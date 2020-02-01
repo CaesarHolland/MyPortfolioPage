@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "https:\/\/caesarholland.github.io"
+        },
+        "articleSection" : "post",
+        "name" : "Polynomial",
+        "headline" : "Polynomial",
+        "description" : "Polynomial problom solving . There are many solotion you were looking for , so come in to look around.\n一元高次多项式的求解问题 Preface 一元四次一下的多项式的求解都可以找到根的计算公式，四次多项式的攻破给当时的数学家以极大的热情扑向一元五次多项式的求解； 但是，从16世纪中叶到19世纪初，这300年间，诸如欧拉、拉格朗日这些数学家们都做过一些尝试但都没有成功，后来拉格朗日觉得 这个东西是无解的吧！然后高斯也意识到了这个问题，然后blablabla······直到法国英雄Golois伽罗华的降临，他的天才促进了今 天我们称之为抽象代数这门学科的蓬勃发展！！~~ 伽罗华的思想就是把 f(x)=0 的求解问题转化为确定对应的伽罗华群是否为所谓 可解群的问题； 可解群是群论中的一个重要内容，曾有一个著名的猜测叫Burnside猜测， 说就奇数个元素的有限群是可解群。这个问题在1963年已被数学家Feit和 Thompson解决，啊证明很长，有闲的同学可以看论文——《太平洋数学杂志1963年刊》；结论就是，不可解群有很多例如n\x26gt;=5时就是不 可解群··· 也就是说他真的是不可解的····  ····但不代表我们弄不到近似解 , 今天我们主要通过牛顿法求一下近似解:\n 牛顿切线法(迭代法) 1 设定x* 是方程f(x)=0的根，选取x0作为x* 的近似值，过点(x0, f(x0))做曲线f(x)=0的切线L，L的方程y=f(x0)\x2bf\x26rsquo;(x0)(x-x0)，求出L与x轴焦点的横坐标x1=x0-f(x0)\/f\x26rsquo;(x0)，称x1为x*的一次近似值，然后设置x0=x1，重复上面的过程，反复迭代，就可以得到一个比较精确的近似值。\nCode 这是一个开放的程序，你可以输入不同的迭代次数观察不同的f值的变化； 代码部分见库——Newton_polynomial.cpp;   牛顿迭代法 2 该算法做了一定优化，与上面相比增加了许多判断以及筛查机制，并增加了误差范围显示【Error range】，但核心公式没有变化； 在初始化函数时我把误差限范围参数esp也设置成用户可自定义来观察其变化，建议值为1；\ncin\x26gt;\x26gt;a\x26gt;\x26gt;b\x26gt;\x26gt;eps; double temp = Polynomial_Root(c,n,a,b,eps); a和b为参数可能存在的范围，要保证参数在此范围内一定存在; 另外的内容代码中有详细注释，在此就不再叙述了;\nCode 代码部分见库——Opt_ntPoly.cpp;   GSL库，可以利用该数学函数库求解多项式 该库包含多项式求解器 gsl_poly_complex_solve ，可以一次性求出所有解，求解原理仍然是迭代法，但算法经过优化，提高精准度；具体文档部分可以在 GCL_POLY找到。",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-02-01 21:52:07 \x2b0800 CST",
+        "dateModified" : "2020-02-01 21:52:07 \x2b0800 CST",
+        "url" : "https:\/\/caesarholland.github.io\/post\/polynomial\/",
+        "wordCount" : "74",
+        "image" : "https://caesarholland.github.io%!s(\u003cnil\u003e)"",
+        "keywords" : [ "Blog" ]   
+    }
+    </script>
+
+
+ <title>Polynomial </title>
+
+
+<meta name="description" content="" />
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="https://fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<link href="https://caesarholland.github.io/css/style.css?v=1580565478" rel="stylesheet" id="theme-stylesheet" type='text/css' media='all'>
+
+<link href="https://caesarholland.github.io/css/custom.css?v=1580565478" rel="stylesheet" type='text/css' media='all'>
+<link rel="shortcut icon" href="https://caesarholland.github.io/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://caesarholland.github.io/img/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+
+<body class="post-template-default single single-post single-format-standard ct-body singular singular-post not-front standard">
+
+  <div id="overflow-container" class="overflow-container">
+    <a class="skip-content" href="#main">Skip to content</a>
+    <header id="site-header" class="site-header" role="banner">
+      <div class='top-navigation'>
+        <div class='container'>
+
+  <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+    <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fas fa-plus"></i></button>
+
+    <div class="menu">
+
+      <ul id="menu-secondary-items" class="menu-secondary-items">
+        
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <ul class="social-media-icons">
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+
+    
+
+    
+
+
+  </ul></div>
+
+      </div>
+
+      <div class="container">
+        <div id="title-info" class="title-info">
+  <div id='site-title' class='site-title'>
+    
+    <a href="/"> My New Hugo Site </a>
+    </div>
+  </div>
+  <button id="toggle-navigation" class="toggle-navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+  <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+    
+
+    <div class="menu">
+      <ul id="menu-primary-items" class="menu-primary-items">
+        
+        
+      </ul>
+    </div>
+
+  </div>
+
+      </div>
+    </header>
+
+    <div id="main" class="main" role="main">
+
+      
+  
+  
+    
+  
+  
+  <div id="loop-container" class="loop-container">
+    
+
+      <div class="post type-post status-publish format-standard hentry category-standard category-travel entry full-without-featured odd excerpt-1">
+
+        
+        <div class="entry-meta">
+          <span class="date">01 February</span>	<span> / </span>
+
+          <span class="author">
+            <a href="https://caesarholland.github.io" title="Posts by " rel="author"></a>
+          </span>
+
+
+          
+
+
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'> Polynomial</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>Polynomial problom solving . There are many solotion you were looking for , so come in to look around.</p>
+<h1 id="一元高次多项式的求解问题">一元高次多项式的求解问题</h1>
+<h2 id="preface">Preface</h2>
+<pre><code>一元四次一下的多项式的求解都可以找到根的计算公式，四次多项式的攻破给当时的数学家以极大的热情扑向一元五次多项式的求解；
+但是，从16世纪中叶到19世纪初，这300年间，诸如欧拉、拉格朗日这些数学家们都做过一些尝试但都没有成功，后来拉格朗日觉得
+这个东西是无解的吧！然后高斯也意识到了这个问题，然后blablabla······直到法国英雄Golois伽罗华的降临，他的天才促进了今
+天我们称之为抽象代数这门学科的蓬勃发展！！~~ 伽罗华的思想就是把 f(x)=0 的求解问题转化为确定对应的伽罗华群是否为所谓
+可解群的问题；
+可解群是群论中的一个重要内容，曾有一个著名的猜测叫Burnside猜测，
+说就奇数个元素的有限群是可解群。这个问题在1963年已被数学家Feit和
+Thompson解决，啊证明很长，有闲的同学可以看论文——《太平洋数学杂志1963年刊》；结论就是，不可解群有很多例如n&gt;=5时就是不
+可解群···
+也就是说他真的是不可解的····
+</code></pre>
+<p>····但不代表我们弄不到近似解 , 今天我们主要通过牛顿法求一下近似解:</p>
+<hr>
+<h2 id="牛顿切线法迭代法-1">牛顿切线法(迭代法) 1</h2>
+<p>设定x* 是方程f(x)=0的根，选取x0作为x* 的近似值，过点(x0, f(x0))做曲线f(x)=0的切线L，L的方程y=f(x0)+f&rsquo;(x0)(x-x0)，求出L与x轴焦点的横坐标x1=x0-f(x0)/f&rsquo;(x0)，称x1为x*的一次近似值，然后设置x0=x1，重复上面的过程，反复迭代，就可以得到一个比较精确的近似值。</p>
+<h3 id="code">Code</h3>
+<pre><code>这是一个开放的程序，你可以输入不同的迭代次数观察不同的f值的变化；
+代码部分见库——Newton_polynomial.cpp;
+</code></pre>
+<hr>
+<h2 id="牛顿迭代法-2">牛顿迭代法 2</h2>
+<p>该算法做了一定优化，与上面相比增加了许多判断以及筛查机制，并增加了误差范围显示【Error range】，但核心公式没有变化；
+在初始化函数时我把误差限范围参数esp也设置成用户可自定义来观察其变化，建议值为1；</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">    cin<span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span>a<span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span>b<span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span>eps;
+    <span style="color:#66d9ef">double</span> temp <span style="color:#f92672">=</span> Polynomial_Root(c,n,a,b,eps);
+</code></pre></div><p>a和b为参数可能存在的范围，要保证参数在此范围内一定存在;
+另外的内容代码中有详细注释，在此就不再叙述了;</p>
+<h3 id="code-1">Code</h3>
+<pre><code>代码部分见库——Opt_ntPoly.cpp;
+</code></pre>
+<hr>
+<h2 id="gsl库可以利用该数学函数库求解多项式">GSL库，可以利用该数学函数库求解多项式</h2>
+<p>该库包含多项式求解器 <strong>gsl_poly_complex_solve</strong> ，可以一次性求出所有解，求解原理仍然是迭代法，但算法经过优化，提高精准度；具体文档部分可以在
+<a href="https://www.gnu.org/software/gsl/doc/html/poly.html#c.gsl_poly_complex_workspace">GCL_POLY</a>找到。</p>
+<h3 id="code-2">Code</h3>
+<pre><code>代码部分见库——lib_Polynomial.cpp;
+</code></pre>
+<hr>
+<h2 id="还有一种万能解题法图灵法">还有一种万能解题法——图灵法！</h2>
+<p>其实就是暴力破解··· 自计算机诞生之日起，我们用violence武力破解了多少个诸如黎曼猜想这种能用但用的不踏实的猜想···虽然现在用着还是不踏实，尽管我们已经验证了十万亿个零点了，但是数学就是这样，只有一种理论通过严谨的证明公式形成一个完美的闭环，才能成为定理，不然就算验证了10000000亿亿亿亿亿亿亿亿亿个非平凡零点都符合的超好也不配称为“定理”，尽管黎曼猜想已逐渐成为很多现代技术发展的基石，如果某一天突然出现一个不吻合的非平凡零点，那估计很多人会疯的吧。</p>
+<hr>
+<h2 id="另一元高次多项式的加减乘运算">另：一元高次多项式的加减乘运算</h2>
+<p>该程序将可以实现一元高次多项式的加法减法和乘法的运算，输入输出都是多项式的系数，当然，如有需要可以加入迭代判断参数来输出完整的多项式；</p>
+<h3 id="code-3">Code:</h3>
+<pre><code>代码部分见库——Add_Poly.cpp;
+</code></pre>
+<hr>
+
+            </article>
+          </div>
+          
+      <div class='entry-meta-bottom'>
+        
+
+  <div class="entry-categories"><p><span>Categories</span>
+    
+  </p>
+</div>
+
+
+
+<div class="entry-tags"><p><span>Tags</span>
+  
+
+</p></div>	</div>
+
+	
+</div>
+</div>
+
+<section id="comments" class="comments">
+  
+
+  
+
+
+
+
+</section>
+</div>
+
+ 
+
+
+
+    </div>
+
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+	<h1>
+    
+    <a href=""> My New Hugo Site </a>
+    
+	</h1>
+
+			
+
+		<div id="menu-footer" class="menu-container menu-footer" role="navigation">
+		<div class="menu">
+
+      <ul id="menu-footer-items" class="menu-footer-items">
+        
+</ul>
+
+</div>	</div>
+
+<ul class="social-media-icons">
+
+        
+
+        
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+
+        
+
+
+        
+
+        
+
+				</ul>	<div class="design-credit">
+		
+		<p>
+			Nederburg Hugo Theme by <a target="_blank" href="https://appernetic.io">Appernetic</a>.
+		</p>
+		<p>
+			A port of Tracks by Compete Themes.
+		</p>
+		
+	</div>
+</footer>
+
+  </div>
+  <script src="https://caesarholland.github.io/js/jquery.min.js"></script>
+<script src="https://caesarholland.github.io/js/jquerymigrate.js"></script>
+<script src="https://caesarholland.github.io/js/production.min.js?v=1580565478"></script>
+
+</body>
+</html>
