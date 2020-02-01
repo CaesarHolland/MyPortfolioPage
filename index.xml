@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://caesarholland.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2020 21:16:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://caesarholland.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://caesarholland.github.io/post/blog/</link>
+      <pubDate>Sat, 01 Feb 2020 21:16:00 +0800</pubDate>
+      
+      <guid>https://caesarholland.github.io/post/blog/</guid>
+      <description>Linux system study record   目前使用的是Ubuntu，不过命令在各个版本的Linux上大都是通用的
+  常用的shell命令    command function     ls 目录信息查看   cd 目录切换   pwd 当前路径显示   uname 系统信息查看   clear 清理屏幕   cat 显示文件内容   sudo 切换用户身份   cp 文件拷贝   su 切换用户   mv 移动文件   mkdir 创建文件夹   touch 创建文件   rm 删除   rmdir 目录删除   ifconfig 显示网络配置信息，需要安装net-tools，根据提示安装   reboot 重启   poweroff 关机   man 系统帮助   sync 数据同步写入磁盘   find 查找文件   grep 查找内容   du 文件夹大小查看   df 磁盘空间查看   gedit 使用gedit打开某文件   ps 当前的系统进程查看   top 进程实时运行状态查看   file 文件类型查看     Install software by API 使用apt包管理工具需要root权限，所以命令格式为： sudo apt-get install [software name] 19版本的Ubuntu好像不需要加get了</description>
+    </item>
+    
+  </channel>
+</rss>
