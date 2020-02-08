@@ -1,0 +1,24 @@
+table thead tr .theadCenter {
+    text-align: center;
+}
+
+.embpic {
+    width: auto;
+    max-width: 100%;
+    border-radius: 7px;
+}
+
+.fa-icon {
+    transition: ;
+    font-size: 4.75rem;
+    line-height: 2.2em;
+    border-radius: 100%;
+    border: solid 1px;
+    width: 2.25em;
+    height: 2.25em;
+    font-family: 'Font Awesome 5 Free';
+}
+
+#2020--2--9- {
+    text-align: center;
+}
