@@ -2,13 +2,25 @@ table thead tr .theadCenter {
     text-align: center;
 }
 
+.logo .brand {
+    width: 10em;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.logo .brand:hover {
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;
+    transition: 0.5s ease-in-out;
+}
+
 .embpic {
     width: auto;
     max-width: 100%;
-    border-radius: 7px;
+    border-radius: 0.5em;
 }
 
-.fa-icon {
+
+/* .fa-icon {
     transition: ;
     font-size: 4.75rem;
     line-height: 2.2em;
@@ -17,7 +29,7 @@ table thead tr .theadCenter {
     width: 2.25em;
     height: 2.25em;
     font-family: 'Font Awesome 5 Free';
-}
+} */
 
 #2020--2--9- {
     text-align: center;

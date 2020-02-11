@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        
+        #T {
+            width: 90%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            color: lightcoral;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            position: relative;
+            /* overflow: hidden;可以清除元素超出盒子的部分 */
+            overflow: hidden;
+            /* 在这里也加一个transition就可以在鼠标移出的时候也是淡出的效果了 */
+            transition: 0.5s;
+        }
+        
+        #code {
+            position: absolute;
+            top: 25px;
+            right: 28px;
+            font-size: 50px;
+            max-width: 50px;
+            max-height: 50px;
+        }
+        /* 通过伪类hover设置鼠标滑过时的状态 */
+        
+        .box:hover {
+            color: black;
+            background-color: lightcoral;
+            box-shadow: 0 0 10px lightcoral, 0 0 40px lightcoral, 0 0 80px lightcoral;
+            transition: 0.5s;
+            transition-delay: 1.25s;
+        }
+        
+        .box span {
+            position: absolute;
+            display: block;
+        }
+        /* 通过nth-child(n)可以选择父元素的第n个子元素 */
+        
+        .box span:nth-child(1) {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, lightcoral);
+            top: 0;
+            left: -100%;
+        }
+        
+        .box:hover span:nth-child(1) {
+            left: 100%;
+            transition: 1s;
+        }
+        
+        .box span:nth-child(2) {
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(transparent, lightcoral);
+            right: 0;
+            top: -100%;
+        }
+        
+        .box:hover span:nth-child(2) {
+            top: 100%;
+            transition: 1s;
+            transition-delay: .25s;
+        }
+        
+        .box span:nth-child(3) {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(-90deg, transparent, lightcoral);
+            bottom: 0;
+            right: -100%;
+        }
+        
+        .box:hover span:nth-child(3) {
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+        
+        .box span:nth-child(4) {
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(lightcoral, transparent);
+            left: 0;
+            bottom: -100%;
+        }
+        
+        .box:hover span:nth-child(4) {
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: .75s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="T">
+        <div class="box">
+            <i id="code" class="fa fa-space-shuttle"></i>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span> -->
+    </div>
+</body>
+
+</html>

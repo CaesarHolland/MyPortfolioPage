@@ -4,39 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <title>Gallery</title>
     <style>
-        .logo img {
-            width: 150px;
-            border-radius: 50%;
+        * {
+            margin: 0;
+            padding: 0;
+            /* background-image: linear-gradient(225deg, rgb(91, 131, 127), rgb(178, 206, 202)); */
+            background-image: url("images/room.jfif");
+        }
+        
+        #header {
+            width: 100%;
+            height: 200px;
+            background: transparent;
+        }
+        
+        #box {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: stretch;
+            background: transparent;
+        }
+        
+        .p {
+            position: absolute;
+        }
+        
+        .content-normal {
+            display: inline-block;
+            width: 25%;
+            height: 400px;
+            background: white;
+            margin: 10px;
+            margin-bottom: 100px;
+            box-shadow: 0 0 15px rgb(62, 73, 72);
+            border-radius: 5px;
+            /* border: solid black; */
+        }
+        
+        .content-shorter {
+            display: inline-block;
+            width: 25%;
+            height: 300px;
+            background: white;
+            margin: 10px;
+            margin-bottom: 100px;
+            box-shadow: 0 0 15px rgb(62, 73, 72);
+            border-radius: 5px;
+            /* border: solid black; */
+        }
+        
+        .content-longer {
+            display: inline-block;
+            width: 25%;
+            height: 500px;
+            background: white;
+            margin: 10px;
+            margin-bottom: 100px;
+            box-shadow: 0 0 15px rgb(62, 73, 72);
+            border-radius: 5px;
+            /* border: solid black; */
         }
     </style>
 </head>
 
-<body class="is-preload">
-    <div id="wrapper">
-        <header id="header" class="alt">
-            <span class="logo"><img src="images/cat.jpg" alt=""></span>
-            <h1>Index</h1>
-            <p>——记忆——</p>
-        </header>
-        <div id="main">
-            <section id="SStaff" class="main">
-
-            </section>
-        </div>
+<body>
+    <!-- <div id="header"></div> -->
+    <div id="box">
+        <div class="content-normal p"></div>
+        <div class="content-shorter p"></div>
+        <div class="content-normal p"></div>
+        <div class="content-normal p"></div>
+        <div class="content-shorter p"></div>
+        <div class="content-longer p"></div>
     </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
