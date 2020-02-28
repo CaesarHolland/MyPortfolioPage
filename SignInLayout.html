@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        
+        .box {
+            position: relative;
+            margin: 150px auto;
+            max-width: 95%;
+            width: 400px;
+            height: 440px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 15px white;
+            transition: 2s;
+            transition-delay: 0.75s;
+        }
+        
+        .box:hover {
+            box-shadow: 0 0 100px bisque;
+            transition: 1.5s;
+        }
+        
+        h2 {
+            position: relative;
+            top: 10px;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        
+        form {
+            margin: 30px auto;
+            max-width: 100%;
+            max-height: 85%;
+            color: aliceblue;
+            overflow: hidden;
+        }
+        
+        .text {
+            position: relative;
+            outline: none;
+            color: antiquewhite;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* margin-left: 10px; */
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            height: 30px;
+            border: none;
+            /* box-shadow: 0 5px 15px antiquewhite; */
+        }
+        
+        .container span {
+            margin-left: 20px;
+            font-size: 10px;
+        }
+        
+        .line {
+            position: relative;
+            width: 90%;
+            height: 1px;
+            background-color: antiquewhite;
+            box-shadow: 0 0 15px antiquewhite;
+            margin: 0 auto;
+            z-index: 1;
+        }
+        
+        textarea {
+            outline: none;
+            color: aquamarine;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            margin: 10px auto;
+            display: block;
+            width: 90%;
+            height: 90px;
+            border: none;
+        }
+        
+        .container {
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        
+        #submit {
+            margin: 10px auto;
+            display: block;
+            width: 150px;
+            height: auto;
+            border: none;
+            border-bottom: 0px solid transparent;
+            color: antiquewhite;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            overflow: visible;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .btnline {
+            width: 0;
+            height: 1px;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+        
+        #submit:hover .btnline:nth-child(1) {
+            width: 150px;
+            background-color: antiquewhite;
+            transition: 0.5s;
+        }
+        
+        .subm {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>:</h2>
+        <form class="formone" action="servlet-path" method="post">
+
+            <div class="container">
+                <span>Full Name</span>
+                <input class="text" type="text" required="required" name="name">
+                <!-- <span class="line"></span> -->
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <span>Your KEY</span>
+                <input class="text" type="password" required="required" name="password">
+                <!-- <span class="line"></span> -->
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <span>Vertify</span>
+                <input class="text" type="password" required="required" name="vertify">
+                <!-- <span class="line"></span> -->
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <span>Do you want say something</span>
+                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <!-- <span class="line"></span> -->
+                <div class="line"></div>
+            </div>
+
+            <div class="subm">
+                <!-- <input id="submit" type="submit" value="launch"> -->
+                <button id="submit" type="submit">l a u n c h
+                    <div class="btnline"></div>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="f f1"></div>
+    <div class="f f2"></div>
+    <div class="f f3"></div>
+    <div class="f f4"></div>
+</body>
+
+</html>

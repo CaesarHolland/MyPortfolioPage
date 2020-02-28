@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(to top, rgb(99, 187, 170), rgb(178, 196, 170));
+    color: aliceblue;
+}
+
+.col {
+    width: 30%;
+    height: 30vw;
+    background-color: rgb(244, 235, 197);
+    border: 1px solid antiquewhite;
+    box-shadow: 10px 10px 0 rgb(189, 132, 194);
+    position: relative;
+    overflow: hidden;
+}
+
+.door {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    bottom: -10%;
+    left: 50%;
+    background-color: rgb(87, 86, 86);
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.door:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+
+.index {
+    position: sticky;
+    bottom: 0.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.index span {
+    /* margin-top: 40px; */
+    float: left;
+    width: 20%;
+    height: auto;
+    font-size: 40px;
+}
