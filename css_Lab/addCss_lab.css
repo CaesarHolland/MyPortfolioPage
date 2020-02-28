@@ -4,8 +4,8 @@ body {
 }
 
 .col {
-    width: 30%;
-    height: 30vw;
+    width: 350px;
+    height: 450px;
     background-color: rgb(244, 235, 197);
     border: 1px solid antiquewhite;
     box-shadow: 10px 10px 0 rgb(189, 132, 194);
