@@ -1,13 +1,16 @@
 body {
-    background: linear-gradient(to top, rgb(99, 187, 170), rgb(178, 196, 170));
+    /* background: linear-gradient(to top, rgb(99, 187, 170), rgb(178, 196, 170)); */
+    /* background: rgb(99, 187, 170); */
+    background: url("/images/room.jfif");
     color: aliceblue;
 }
 
 .col {
-    width: 350px;
+    width: 450px;
+    max-width: 90%;
     height: 450px;
-    background-color: rgb(244, 235, 197);
-    border: 1px solid antiquewhite;
+    /* background-color: rgb(244, 235, 197); */
+    /* border: 1px solid antiquewhite; */
     box-shadow: 10px 10px 0 rgb(189, 132, 194);
     position: relative;
     overflow: hidden;
@@ -18,16 +21,42 @@ body {
     width: 50px;
     height: 150px;
     bottom: -10%;
-    left: 50%;
-    background-color: rgb(87, 86, 86);
-    border-radius: 10px;
     transition: 0.5s;
     cursor: pointer;
+    border: 1px solid antiquewhite;
 }
 
 .door:hover {
     background-color: black;
     transition: 0.5s;
+}
+
+#door_exit {
+    left: 20%;
+}
+
+#door_next {
+    right: 20%;
+}
+
+#de {
+    position: absolute;
+    width: 50px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    bottom: 100px;
+    left: 20%;
+}
+
+#dn {
+    position: absolute;
+    width: 50px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    bottom: 100px;
+    right: 20%;
 }
 
 .index {

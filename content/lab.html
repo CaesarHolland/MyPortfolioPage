@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
     <link rel="stylesheet" type="text/css" href="/css_Lab/component.css" />
     <link rel="stylesheet" type="text/css" href="/css_Lab/addCss_lab.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css_Lab/lab_led.css">
+    <link rel="stylesheet" href="/css_Lab/lab_album.css">
     <script src="/js_Lab/modernizr.custom.js"></script>
     <title>scroll</title>
     <style>
@@ -27,19 +28,25 @@
         <header class="vs-header">
             <!-- <h1>Sliding Triple View Layout <span>with Visible Adjoining Sections</span></h1> -->
             <ul class="vs-nav">
-                <li><a href="#section-1">Hate dog flop</a></li>
-                <li><a href="#section-2">Stretch hopped</a></li>
-                <li><a href="#section-3">Inspect anything</a></li>
-                <li><a href="#section-4">Attack everything</a></li>
-                <li><a href="#section-5">Find something</a></li>
+                <li><a href="#section-1">Light Button</a></li>
+                <li><a href="#section-2">Colorful Button</a></li>
+                <li><a href="#section-3">Login page style</a></li>
+                <li><a href="#section-4">Spining Album</a></li>
+                <li><a href="#section-5">Door</a></li>
             </ul>
         </header>
         <div class="vs-wrapper">
             <section id="section-1" class="square">
                 <div class="vs-content">
                     <!-- <h2>Hate dog flop over and missing until dinner time sun bathe make muffins stand in front of the computer screen</h2> -->
-                    <div class="col">
-
+                    <div class="col" id="led_area">
+                        <div id="led">
+                            <i id="led_sign" class="fa fa-space-shuttle"></i>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -47,7 +54,8 @@
                 <div class="vs-content">
                     <!-- <h2>Stretch hopped up on goofballs</h2> -->
                     <div class="col">
-
+                        <div class="cd"></div>
+                        <div class="music"></div>
                     </div>
                 </div>
             </section>
@@ -71,7 +79,10 @@
                 <div class="vs-content">
                     <!-- <h2>Find something else more interesting inspect anything brought</h2> -->
                     <div class="col">
-                        <a class="door" href="next space"></a>
+                        <span id="de">exit</span>
+                        <span id="dn">next</span>
+                        <a id="door_exit" class="door" href="/transport_center/code_center.html"></a>
+                        <a id="door_next" class="door" href="/content/temp.html"></a>
                     </div>
                 </div>
             </section>
