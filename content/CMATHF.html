@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>2020/1/10</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/SelfAdd1.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            background-image: linear-gradient(245deg, rgb(255, 239, 193), rgb(33, 32, 27));
+        }
+        
+        table thead tr th {
+            text-align: center;
+        }
+        
+        .inimg {
+            width: auto;
+            max-width: 100%;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1>C++ Math Function</h1>
+            <p>04 / 26 / 2020</p>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Content -->
+            <section id="content" class="main">
+                <span class="image main HeadImage"><img src="../images/clock.jpg" alt="" /></span>
+
+                <h3 id="三角函数-trigonometric-function">三角函数 trigonometric function</h3>
+                <ol>
+                    <li><code>double sin(double)</code></li>
+                    <li><code>double cos(double)</code></li>
+                    <li><code>double tan(double)</code></li>
+                </ol>
+                <hr>
+                <h3 id="反三角函数-anti-trigonometric-function">反三角函数 Anti-trigonometric function</h3>
+                <ol>
+                    <li><code>double asin(double);  //结果介于[-Pi/2 , Pi/2]</code></li>
+                    <li><code>double acos(double);  //结果介于[0 , Pi]</code></li>
+                    <li><code>double atan(double);  //反正切（主值）结果介于[-Pi/2 , Pi/2]</code></li>
+                    <li><code>double atan2(double); //反正切（整圆值）结果介于[-Pi/2 , Pi/2]</code></li>
+                </ol>
+                <hr>
+                <h3 id="双曲三角函数-hyperbolic-trigonometric-function">双曲三角函数 Hyperbolic trigonometric function</h3>
+                <ol>
+                    <li><code>double sinh(double);</code></li>
+                    <li><code>double cosh(double);</code></li>
+                    <li><code>double tanh(double);</code></li>
+                </ol>
+                <hr>
+                <h3 id="指数与对数-exponents-and-logarithms">指数与对数 Exponents and Logarithms</h3>
+                <ol>
+                    <li><code>double exp(double);</code></li>
+                    <li><code>double pow(double , double);</code></li>
+                    <li><code>double log(double);   //e为底</code></li>
+                    <li><code>double log10(double); //其他对数可以用换底公式解决：log2(N)=log10(N)/log10(2)</code></li>
+                </ol>
+                <hr>
+                <h3 id="取整函数-rounding-function">取整函数 Rounding Function</h3>
+                <ol>
+                    <li><code>double ceil(double);  //up rounding</code></li>
+                    <li><code>double floor(double); //down rounding</code></li>
+                </ol>
+                <hr>
+                <h3 id="绝对值-absolute-value-function">绝对值 Absolute value function</h3>
+                <p><code>double fabs(double);</code></p>
+                <hr>
+                <h3 id="标准化浮点数-standardized-floating-point">标准化浮点数 Standardized floating point</h3>
+                <ol>
+                    <li><code>double frexp(double f , int *p); //f=x*2^p , 已知f、p求x</code></li>
+                    <li><code>double ldexp(double x , int p);  //已知x、p求f</code></li>
+                </ol>
+                <hr>
+                <h3 id="取整与取余-rounding-and-surplus">取整与取余 Rounding and surplus</h3>
+                <ol>
+                    <li><code>double modf(double , double*); //将参数的整数部分通过指针回传，返回小数部分</code></li>
+                    <li><code>double fmod(double , double);  //返回两参数相除的余数</code></li>
+                </ol>
+                <hr>
+                <h3 id="平方根">平方根</h3>
+                <p><code>double sqrt(double);</code></p>
+                <hr>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>Aliquam sed mauris</h2>
+                <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etiam feugiat</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                    <dt>Phone</dt>
+                    <dd>(000) 000-0000 x 0000</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">information@untitled.tld</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+                </ul>
+            </section>
+            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

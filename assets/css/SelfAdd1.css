@@ -1,3 +1,8 @@
+.HeadImage {
+    max-height: 600px;
+    overflow: hidden;
+}
+
 table thead tr .theadCenter {
     text-align: center;
 }
