@@ -44,7 +44,7 @@
     "front-matter": "^3.0.2",
     "jasmine": "^3.5.0",
     "markdown": "0.5.x",
-    "markdown-it": "10.x",
+    "markdown-it": "12.x",
     "node-fetch": "^2.6.0",
     "rollup": "^1.27.11",
     "rollup-plugin-babel": "^4.3.3",
